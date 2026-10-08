@@ -158,3 +158,61 @@ body{background:linear-gradient(180deg,#f7f3ff 0%,#f9fbff 55%,#f2f8ff 100%)}
 .tile.expression-winning .tile-dot{animation:dot-win .75s cubic-bezier(.2,.9,.2,1) infinite alternate}
 @keyframes dot-pop{0%{transform:scale(1)}35%{transform:scale(1.28) rotate(-8deg)}100%{transform:scale(.1);opacity:0}}
 @keyframes dot-win{from{transform:translateY(0) scale(1)}to{transform:translateY(-5px) scale(1.08)}}
+
+
+/* Native mobile-game presentation */
+html,body{width:100%;min-height:100%;background:#eee9ff}
+body{background:radial-gradient(circle at 50% -20%,#fff 0,#f4efff 42%,#e9e4fb 100%);overscroll-behavior:none}
+.app-shell{max-width:480px;min-height:100dvh;margin:0 auto;padding:env(safe-area-inset-top) max(10px,env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left));background:linear-gradient(180deg,#faf8ff 0%,#f2effd 100%);box-shadow:0 0 45px #4b3b7818}
+.topbar{height:48px;padding:2px 1px 0;position:sticky;top:0;z-index:5;background:#faf8ffeb;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.brand-mark{width:32px;height:32px;border-radius:10px}
+.hero-row{padding:11px 3px 10px}
+.eyebrow{font-size:8px}
+.hero-row h1{font-size:clamp(25px,7.5vw,32px)}
+.subtitle{font-size:10px;margin-top:5px}
+.level-card{padding:8px 9px;border-radius:18px}
+.level-number{width:49px;height:49px;border-radius:14px}
+.level-number strong{font-size:22px}
+.level-stars{font-size:17px}
+.map-button{min-height:40px}
+.goal-row{padding:10px 2px 8px}
+.goal-copy strong{font-size:14px}
+.goal-copy>span:last-child{font-size:10px}
+.board-wrap{padding:9px 7px 8px;border-radius:21px;box-shadow:0 6px 0 #4c2eb8,0 12px 24px #5635b72b}
+.board-ribbon{padding-bottom:6px;font-size:7px}
+.board{gap:4px;padding:5px;border-radius:12px}
+.tile{border-radius:9px;box-shadow:inset 0 2px 0 #ffffffaa,inset 0 -3px 0 #00000018,0 2px 0 #38218f}
+.board-footer{padding:7px 2px 1px}
+.powerups{padding-top:11px;gap:6px}
+.powerups>p{font-size:8px;margin-bottom:-1px}
+.powerup{min-height:53px;padding:7px 6px;border-radius:13px}
+.power-icon{width:27px;height:27px;font-size:17px}
+.powerup strong{font-size:9px}
+.powerup small{font-size:7px}
+.bottom-note{padding:11px 0 1px;font-size:9px}
+.modal-backdrop{padding:12px}
+.modal{border-radius:23px}
+@media(max-height:720px) and (min-width:381px){
+ .hero-row{padding-top:7px;padding-bottom:7px}
+ .hero-row h1{font-size:26px}
+ .level-card{padding:7px 8px}
+ .level-number{width:45px;height:45px}
+ .goal-row{padding:7px 2px}
+ .board-wrap{padding-top:7px}
+ .powerups{padding-top:8px}
+ .powerup{min-height:48px}
+ .bottom-note{display:none}
+}
+@media(max-width:380px){
+ .hero-row{padding-top:7px;padding-bottom:7px}
+ .hero-row h1{font-size:24px}
+ .subtitle{font-size:9px}
+ .level-card{padding:7px}
+ .level-number{width:44px;height:44px}
+ .level-number strong{font-size:20px}
+ .goal-row{padding:7px 2px}
+ .board-wrap{padding:7px 5px 6px}
+ .board{gap:3px;padding:4px}
+ .powerups{padding-top:8px}
+ .powerup{min-height:49px}
+}
