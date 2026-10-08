@@ -216,3 +216,22 @@ body{background:radial-gradient(circle at 50% -20%,#fff 0,#f4efff 42%,#e9e4fb 10
  .powerups{padding-top:8px}
  .powerup{min-height:49px}
 }
+
+/* Home screen: mobile game landing view */
+.home-screen{min-height:calc(100dvh - 48px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 8px 34px}
+.home-logo{display:flex;align-items:center;gap:9px;font-size:31px;font-weight:1000;letter-spacing:-1.8px}
+.home-logo-mark{display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,#ff9bc4,#ff67a8);color:#fff;font-size:27px;box-shadow:0 5px 0 #d94a8d,0 9px 20px #e75b9d35}
+.home-logo strong span{color:var(--purple)}
+.home-kicker{margin:28px 0 5px;font-size:9px;font-weight:1000;letter-spacing:2px;color:#9b8bc9}
+.home-title{margin:0;font-size:clamp(34px,10vw,48px);line-height:1;letter-spacing:-2px;font-weight:1000}
+.home-copy{margin:9px 0 24px;color:var(--muted);font-size:12px;font-weight:800}
+.home-level-button{position:relative;width:min(100%,330px);min-height:116px;border:0;border-radius:27px;padding:18px 58px 18px 22px;text-align:left;color:#fff;background:linear-gradient(145deg,#8561f5,#6541dd);box-shadow:0 8px 0 #4b2cbc,0 16px 28px #6844df35;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.home-level-button:active{transform:translateY(4px);box-shadow:0 4px 0 #4b2cbc,0 9px 18px #6844df25}
+.home-level-label{display:block;font-size:10px;font-weight:1000;letter-spacing:1.6px;opacity:.78}
+.home-level-button strong{display:block;font-size:46px;line-height:1;margin-top:4px;letter-spacing:-2px}
+.home-level-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;border-radius:15px;background:#ffffff22;font-size:38px;font-weight:400}
+.home-stats{display:flex;gap:10px;margin-top:24px}
+.home-stats span{padding:9px 13px;border-radius:13px;background:#fff;border:2px solid #ebe5fa;box-shadow:0 3px 0 #dfd7f2;color:#8b82a9;font-size:10px;font-weight:900}
+.home-stats strong{color:var(--ink);font-size:14px;margin-right:3px}
+@media(max-height:650px){.home-screen{padding-top:18px;padding-bottom:22px}.home-kicker{margin-top:18px}.home-copy{margin-bottom:16px}.home-level-button{min-height:100px}.home-stats{margin-top:17px}}
+@media(max-width:380px){.home-logo{font-size:28px}.home-logo-mark{width:40px;height:40px}.home-title{font-size:34px}.home-level-button{min-height:104px}}
