@@ -13,12 +13,29 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="./" aria-label="Pop Party home"><span class="brand-mark">✦</span><span>pop<span class="brand-accent">party</span></span></a>
+      <a class="brand" id="brand" href="./" aria-label="Pop Party home"><span class="brand-mark">✦</span><span>pop<span class="brand-accent">party</span></span></a>
       <div class="wallet" aria-label="Your coins"><span aria-hidden="true">🪙</span><strong id="coin-count">0</strong></div>
       <button class="icon-button" id="settings-button" aria-label="Settings">⚙</button>
     </header>
 
     <main>
+      <section id="home-screen" class="home-screen" aria-label="Home">
+        <div class="home-logo"><span class="home-logo-mark">✦</span><strong>pop<span>party</span></strong></div>
+        <p class="home-kicker">YOUR PUZZLE ADVENTURE</p>
+        <h1 class="home-title">Ready to pop?</h1>
+        <p class="home-copy">Continue from where you left off.</p>
+        <button id="play-level-button" class="home-level-button" type="button" aria-label="Play your current level">
+          <span class="home-level-label">PLAY LEVEL</span>
+          <strong id="home-level-number">1</strong>
+          <span class="home-level-arrow">›</span>
+        </button>
+        <div class="home-stats">
+          <span><strong id="home-stars">0</strong> stars</span>
+          <span><strong id="home-coins">0</strong> coins</span>
+        </div>
+      </section>
+
+      <section id="game-screen" class="game-screen hidden" aria-label="Game">
       <section class="hero-row" aria-label="Welcome">
         <div><p class="eyebrow">A LITTLE GAME WITH BIG JOY</p><h1>Ready, set, <span>POP!</span></h1><p class="subtitle">Match blocks. Make combos. Clear the board.</p></div>
       </section>
@@ -48,6 +65,7 @@
       </section>
 
       <section class="bottom-note"><span>💜</span> Tiny pops. Big happy.</section>
+      </section>
     </main>
   </div>
 
