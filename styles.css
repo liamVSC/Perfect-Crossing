@@ -149,3 +149,12 @@ body{background:linear-gradient(180deg,#f7f3ff 0%,#f9fbff 55%,#f2f8ff 100%)}
 .goal-mini{width:26px;height:26px;display:grid;place-items:center}.goal-mini svg{width:100%;height:100%}
 @keyframes character-pop-juice{0%{transform:scale(1)}35%{transform:scale(1.18) rotate(-5deg)}100%{transform:scale(.1) rotate(12deg);opacity:0}}
 @keyframes character-win{0%{transform:translateY(0) rotate(-3deg) scale(1)}100%{transform:translateY(-6px) rotate(3deg) scale(1.08)}}
+
+/* Character-free board: clean colourful tiles */
+.tile .face{width:100%;height:100%;}
+.tile-dot{width:42%;height:42%;border-radius:32%;background:rgba(255,255,255,.28);box-shadow:inset 0 2px 0 rgba(255,255,255,.42),0 2px 3px rgba(48,25,110,.12);display:block;transform:rotate(-4deg)}
+.tile.expression-selected .tile-dot{transform:scale(1.12) rotate(-4deg);background:rgba(255,255,255,.48)}
+.tile.expression-popping .tile-dot{animation:dot-pop .3s cubic-bezier(.2,.9,.2,1) forwards}
+.tile.expression-winning .tile-dot{animation:dot-win .75s cubic-bezier(.2,.9,.2,1) infinite alternate}
+@keyframes dot-pop{0%{transform:scale(1)}35%{transform:scale(1.28) rotate(-8deg)}100%{transform:scale(.1);opacity:0}}
+@keyframes dot-win{from{transform:translateY(0) scale(1)}to{transform:translateY(-5px) scale(1.08)}}
