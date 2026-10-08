@@ -1,0 +1,1 @@
+{"name":"perfect-crossing","version":"0.1.0","private":true,"description":"Mobile-first procedural crossing game","scripts":{"test":"node --check game.js","check":"node --check game.js"}}
