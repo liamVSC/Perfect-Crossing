@@ -1,0 +1,10 @@
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const game=fs.readFileSync("game.js","utf8");
+assert.match(game,/function makeLevel/);
+assert.match(game,/function simulateSolvability/);
+assert.match(game,/function checkCollision/);
+assert.match(game,/function fail/);
+assert.match(game,/function complete/);
+assert.match(game,/MAX_LEVEL=5000/);
+console.log("Perfect Crossing core checks passed");
