@@ -297,3 +297,6 @@ body{background:#eee9ff}
   .power-icon{width:25px;height:25px}
 }
 @media(min-width:481px){.app-shell{box-shadow:0 0 45px #4b3b7818}}
+
+/* Fit all nine rows inside the fixed-height phone board. */
+@media(max-width:600px){.game-screen .board{grid-template-rows:repeat(9,minmax(0,1fr));align-content:stretch;min-height:0}.game-screen .tile{min-height:0;height:100%;aspect-ratio:auto}.game-screen .board-wrap{overflow:hidden}}
