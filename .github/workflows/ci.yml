@@ -1,9 +1,10 @@
-name: Perfect Crossing CI
+name: Pop Party CI
 on:
   push:
     branches: ["main"]
   pull_request:
     branches: ["main"]
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -13,10 +14,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
       - run: npm test
+      - run: npm run check
       - run: test -f index.html
       - run: test -f styles.css
       - run: test -f game.js
+      - run: test -f game-core.js
       - run: test -f manifest.webmanifest
       - run: test -f sw.js
+      - run: test -f icon.svg
