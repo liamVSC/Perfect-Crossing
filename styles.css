@@ -487,8 +487,7 @@ body{
 .map-node.milestone:before{content:"★";position:absolute;z-index:2;right:-5px;top:-6px;width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#fff0a2;color:#78451a;font-size:11px;border:2px solid #fff;box-shadow:0 2px 0 #6e3f9b}
 .map-node.completed.milestone:before{background:#fff;color:#e5a21b}
 .map-node.current{z-index:1}
-@media(min-width:420px){
- .level-map .map-node:nth-child(6){grid-column:5;grid-row:2}
+.level-map .map-node:nth-child(6){grid-column:5;grid-row:2}
  .level-map .map-node:nth-child(7){grid-column:4;grid-row:2}
  .level-map .map-node:nth-child(8){grid-column:3;grid-row:2}
  .level-map .map-node:nth-child(9){grid-column:2;grid-row:2}
@@ -503,4 +502,3 @@ body{
  .level-map .map-node:nth-child(18){grid-column:3;grid-row:4}
  .level-map .map-node:nth-child(19){grid-column:2;grid-row:4}
  .level-map .map-node:nth-child(20){grid-column:1;grid-row:4}
-}
