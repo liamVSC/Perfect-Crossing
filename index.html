@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="Perfect Crossing — a one-thumb traffic crossing game with thousands of procedural levels.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Perfect Crossing</title>
+</head>
+<body>
+  <main class="app" aria-label="Perfect Crossing">
+    <header class="hud">
+      <div class="currency"><span aria-hidden="true">💵</span><strong id="cash">£0</strong></div>
+      <div class="level">LEVEL <strong id="level">1</strong></div>
+      <div class="currency"><span aria-hidden="true">💎</span><strong id="gems">0</strong></div>
+    </header>
+
+    <section class="game-card">
+      <div id="message" class="message" aria-live="polite">Tap the road to move</div>
+      <div id="board" class="board" role="application" aria-label="Crossing game"></div>
+      <button id="moveButton" class="move-button" type="button">TAP TO MOVE ↑</button>
+    </section>
+
+    <nav class="bottom-nav" aria-label="Game navigation">
+      <button class="nav-button active" type="button" data-screen="play">PLAY</button>
+      <button class="nav-button" type="button" data-screen="tasks">TASKS</button>
+      <button class="nav-button" type="button" data-screen="shop">SHOP</button>
+    </nav>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+      <button id="modalButton" class="primary-button" type="button">NEXT LEVEL</button>
+    </div>
+  </div>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
