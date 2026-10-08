@@ -1,4 +1,4 @@
-const CACHE="perfect-crossing-v2";
+const CACHE="perfect-crossing-v3";
 const ASSETS=[
   "./",
   "./index.html",
