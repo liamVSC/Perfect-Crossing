@@ -300,3 +300,6 @@ body{background:#eee9ff}
 
 /* Fit all nine rows inside the fixed-height phone board. */
 @media(max-width:600px){.game-screen .board{grid-template-rows:repeat(9,minmax(0,1fr));align-content:stretch;min-height:0}.game-screen .tile{min-height:0;height:100%;aspect-ratio:auto}.game-screen .board-wrap{overflow:hidden}}
+
+/* Account for safe-area padding when sizing the locked game viewport. */
+.game-screen,.home-screen{height:calc(100dvh - 54px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
