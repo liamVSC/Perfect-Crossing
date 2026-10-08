@@ -478,3 +478,29 @@ body{
 @keyframes map-current{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 @media(max-width:380px){.map-section,.daily-card,.achievement-card{padding:10px;border-radius:17px}.level-map{gap:6px}.map-node{border-radius:12px;font-size:15px}.daily-card{grid-template-columns:36px minmax(0,1fr) auto;gap:7px}.daily-icon{width:36px;height:36px;font-size:20px}.daily-claim{padding:7px 6px;font-size:8px}}
 @media(prefers-reduced-motion:reduce){.map-node.current{animation:none}}
+
+/* Adventure trail: milestone stops and a serpentine route. */
+.level-map{isolation:isolate;row-gap:11px}
+.level-map:before{content:"";position:absolute;z-index:-1;left:7%;right:7%;top:12%;bottom:12%;border:3px dashed #8b69cb;border-radius:35px;opacity:.55;pointer-events:none}
+.map-node{z-index:0;transition:transform .15s,filter .15s}
+.map-node:not(:disabled):active{transform:translateY(2px) scale(.96)}
+.map-node.milestone:before{content:"★";position:absolute;z-index:2;right:-5px;top:-6px;width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#fff0a2;color:#78451a;font-size:11px;border:2px solid #fff;box-shadow:0 2px 0 #6e3f9b}
+.map-node.completed.milestone:before{background:#fff;color:#e5a21b}
+.map-node.current{z-index:1}
+@media(min-width:420px){
+ .level-map .map-node:nth-child(6){grid-column:5;grid-row:2}
+ .level-map .map-node:nth-child(7){grid-column:4;grid-row:2}
+ .level-map .map-node:nth-child(8){grid-column:3;grid-row:2}
+ .level-map .map-node:nth-child(9){grid-column:2;grid-row:2}
+ .level-map .map-node:nth-child(10){grid-column:1;grid-row:2}
+ .level-map .map-node:nth-child(11){grid-column:1;grid-row:3}
+ .level-map .map-node:nth-child(12){grid-column:2;grid-row:3}
+ .level-map .map-node:nth-child(13){grid-column:3;grid-row:3}
+ .level-map .map-node:nth-child(14){grid-column:4;grid-row:3}
+ .level-map .map-node:nth-child(15){grid-column:5;grid-row:3}
+ .level-map .map-node:nth-child(16){grid-column:5;grid-row:4}
+ .level-map .map-node:nth-child(17){grid-column:4;grid-row:4}
+ .level-map .map-node:nth-child(18){grid-column:3;grid-row:4}
+ .level-map .map-node:nth-child(19){grid-column:2;grid-row:4}
+ .level-map .map-node:nth-child(20){grid-column:1;grid-row:4}
+}
