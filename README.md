@@ -6,13 +6,13 @@ Pop Party is an original, mobile-first block-popping puzzle game. Tap connected 
 
 Live game: https://liamvsc.github.io/temp-game/
 
-No build step, account, backend, or ads are required. Progress is saved locally in the browser; it does not sync between devices.
+No build step, account, backend, or ads are required. Progress and the active puzzle run are saved locally in the browser, including placed boosters; saves do not sync between devices.
 
 ## Rules
 
 - Tap a connected group of 2+ matching blocks to pop it.
 - Groups of 4+ create rockets, 5+ create bombs, and 9+ create rainbow clears.
-- Tiles fall under gravity and refill from above. Large groups can trigger cascades and combo scoring.
+- Tiles fall under gravity and refill from above. New matches formed by gravity do not automatically pop; each move is deliberate.
 - Clear both colour objectives before running out of moves.
 - Completing a level awards coins and automatically advances to the next level.
 - Only the current unlocked level is playable; completed levels cannot be replayed.
