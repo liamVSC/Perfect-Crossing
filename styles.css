@@ -67,3 +67,52 @@ body{overscroll-behavior-y:none}
   .powerups{max-width:520px;margin-inline:auto}
 }
 @media(prefers-reduced-motion:reduce){.tile:active{transform:none}}
+
+/* App Store polish */
+:root{--ink:#2c2550;--purple:#6d45e9;--purple-dark:#4c2ab5;--pink:#ff629f;--gold:#ffbf3f;--surface:#fff;--soft:#f4f0ff;--green:#4ed7aa}
+body{background:linear-gradient(180deg,#f7f3ff 0%,#f9fbff 55%,#f2f8ff 100%)}
+.app-shell{max-width:620px}
+.topbar{height:52px}
+.brand{font-weight:1000;letter-spacing:-1.2px}
+.brand-mark{box-shadow:0 3px 0 #d94a8d,0 6px 14px #e75b9d30}
+.wallet{background:linear-gradient(180deg,#fff,#fbf9ff);border-color:#e9e2fb;box-shadow:0 3px 0 #ddd4f4,0 5px 12px #6246b514;font-weight:1000}
+.icon-button{background:#fff;border:2px solid #eee8ff;box-shadow:0 3px 0 #e3dcf5}
+.hero-row{padding:20px 3px 17px}
+.eyebrow{font-size:9px;letter-spacing:1.7px}
+.hero-row h1{font-size:clamp(29px,8vw,42px);letter-spacing:-2px}
+.subtitle{font-size:12px}
+.hero-pal{width:74px;height:71px;box-shadow:0 6px 0 #2bb69a,0 12px 22px #2cb69a35}
+.level-card{padding:11px;border-radius:21px;border-color:#e9e3fb;box-shadow:0 5px 0 #ddd5f5,0 8px 20px #6246b510}
+.level-number{width:57px;height:57px;border-radius:17px;box-shadow:inset 0 2px #ffffff55,0 4px 0 #5330c2}
+.level-progress{padding:0 3px}
+.level-stars{font-size:20px;text-shadow:0 1px 0 #ffe7a3}
+.progress-track{height:8px;background:#eee9fb;box-shadow:inset 0 1px 2px #d9d1ed}
+.progress-track span{background:linear-gradient(90deg,#ff6da8,#ffca4f);box-shadow:0 0 8px #ff9d5c55}
+.map-button{background:#f0ebff;border:2px solid #e7dfff;box-shadow:0 3px 0 #d9cff5}
+.goal-row{padding-top:15px}
+.goal-copy strong{font-size:16px}
+.goal-chip{background:linear-gradient(180deg,#fff,#faf8ff);border-color:#e7e0f8;box-shadow:0 3px 0 #e0d8f3}
+.board-wrap{padding:13px 9px 10px;background:linear-gradient(155deg,#8764f2,#6844d8);border-radius:24px;box-shadow:0 7px 0 #4c2eb8,0 16px 30px #5635b733}
+.board-ribbon{font-size:9px;font-weight:1000;text-shadow:0 1px 0 #4c2da4}
+.board{gap:5px;padding:7px;background:linear-gradient(180deg,#5134b0,#4a2fa6);box-shadow:inset 0 4px 9px #2c1b7466,0 1px 0 #ffffff25}
+.tile{border-radius:11px;box-shadow:inset 0 3px 0 #ffffffaa,inset 0 -4px 0 #00000018,0 3px 0 #38218f;transition:transform .1s cubic-bezier(.2,.8,.2,1),filter .1s,box-shadow .1s}
+.tile:hover{filter:brightness(1.04)}
+.tile:active{transform:scale(.88);box-shadow:inset 0 2px 0 #ffffff88,inset 0 -2px 0 #00000018,0 1px 0 #38218f}
+.tile .face{filter:drop-shadow(0 2px 1px #00000018);font-weight:1000}
+.tile.power-rocket,.tile.power-bomb,.tile.power-rainbow{animation:power-idle 1.7s ease-in-out infinite}
+.board-footer{padding:11px 3px 2px}
+.board-footer strong{font-size:16px}
+.powerups{padding-top:16px}
+.powerups>p{font-size:9px}
+.powerup{min-height:61px;background:linear-gradient(180deg,#fff,#fbf9ff);border-color:#e8e2f8;box-shadow:0 4px 0 #dfd7f2,0 7px 14px #6045a50b;transition:transform .1s,box-shadow .1s}
+.powerup:active{transform:translateY(2px);box-shadow:0 2px 0 #dfd7f2}
+.power-icon{box-shadow:inset 0 2px #ffffff55}
+.power-plus{width:22px;height:22px;display:grid;place-items:center;border-radius:8px;background:#f0ebff}
+.bottom-note{padding-top:20px}
+.modal-backdrop{background:#24154399}
+.modal{border-color:#eee8ff;box-shadow:0 9px 0 #d2c5f5,0 24px 55px #1c103c55}
+.primary-button{background:linear-gradient(100deg,#8561f5,#6541dd);box-shadow:0 5px 0 #4b2cbc,0 8px 16px #6844df30}
+.secondary-button{box-shadow:0 3px 0 #ddd5f2}
+@keyframes power-idle{0%,100%{filter:brightness(1)}50%{filter:brightness(1.07)}}
+@media(max-width:380px){.hero-row{padding-bottom:13px}.board-wrap{padding-inline:7px}.board{gap:3px;padding:5px}.powerup{min-height:57px}}
+@media(prefers-reduced-motion:reduce){.tile.power-rocket,.tile.power-bomb,.tile.power-rainbow{animation:none}}
