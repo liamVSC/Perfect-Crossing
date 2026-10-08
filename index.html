@@ -36,35 +36,28 @@
       </section>
 
       <section id="game-screen" class="game-screen hidden" aria-label="Game">
-      <section class="hero-row" aria-label="Welcome">
-        <div><p class="eyebrow">A LITTLE GAME WITH BIG JOY</p><h1>Ready, set, <span>POP!</span></h1><p class="subtitle">Match blocks. Make combos. Clear the board.</p></div>
-      </section>
-
-      <section class="level-card" aria-label="Current level and progress">
-        <div class="level-number"><span>LEVEL</span><strong id="level-number">1</strong></div>
-        <div class="level-progress"><div class="progress-track"><span id="progress-fill"></span></div></div>
-        <button id="map-button" class="map-button">MAP <span>⌁</span></button>
+      <section class="game-hud" aria-label="Current level">
+        <div class="game-level"><span>LEVEL</span><strong id="level-number">1</strong></div>
+        <div class="hud-progress"><span id="progress-fill"></span></div>
+        <div class="moves-pill"><span>MOVES</span><strong id="moves-left">25</strong></div>
       </section>
 
       <section class="goal-row" aria-label="Level goals">
-        <div class="goal-copy"><span class="eyebrow">TODAY'S MISSION</span><strong id="goal-title">Collect 12 pals</strong><span id="goal-subtitle">Make every move count!</span></div>
+        <div class="goal-copy"><strong id="goal-title">Clear tiles</strong><span id="goal-subtitle">Make every move count.</span></div>
         <div id="goals" class="goals"></div>
       </section>
 
       <section class="board-wrap" aria-label="Puzzle board">
-        <div class="board-ribbon"><span>✨</span> POP YOUR WAY TO THE TOP <span>✨</span></div>
+        <div class="board-ribbon"><span id="combo-label">READY</span></div>
         <div id="board" class="board" role="grid" aria-label="Puzzle tiles"></div>
-        <div class="board-footer"><span>Moves left <strong id="moves-left">25</strong></span><span id="combo-label">Let the popping begin!</span></div>
+        <div class="board-footer"><span id="score-label">Score <strong id="score-count">0</strong></span><span id="board-message">Tap 2+ matching blocks</span></div>
       </section>
 
       <section class="powerups" aria-label="Power-ups">
-        <p>NEED A HAND?</p>
-        <button class="powerup" data-power="rocket"><span class="power-icon rocket-icon">➜</span><span><strong>Rocket</strong><small id="rocket-count">0 owned</small></span><span class="power-plus">+</span></button>
-        <button class="powerup" data-power="bomb"><span class="power-icon bomb-icon">✹</span><span><strong>Pop bomb</strong><small id="bomb-count">0 owned</small></span><span class="power-plus">+</span></button>
-        <button class="powerup" data-power="shuffle"><span class="power-icon shuffle-icon">⤨</span><span><strong>Shuffle</strong><small>Fresh possibilities</small></span><span class="power-plus">+</span></button>
+        <button class="powerup" data-power="rocket"><span class="power-icon rocket-icon">➜</span><span><strong>Rocket</strong><small id="rocket-count">0</small></span></button>
+        <button class="powerup" data-power="bomb"><span class="power-icon bomb-icon">✹</span><span><strong>Bomb</strong><small id="bomb-count">0</small></span></button>
+        <button class="powerup" data-power="shuffle"><span class="power-icon shuffle-icon">⤨</span><span><strong>Shuffle</strong><small>25 coins</small></span></button>
       </section>
-
-      <section class="bottom-note"><span>💜</span> Tiny pops. Big happy.</section>
       </section>
     </main>
   </div>
