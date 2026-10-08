@@ -303,3 +303,12 @@ body{background:#eee9ff}
 
 /* Account for safe-area padding when sizing the locked game viewport. */
 .game-screen,.home-screen{height:calc(100dvh - 54px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
+
+/* Clear, always-visible level objective chips */
+.goals{display:flex;align-items:center;gap:6px;min-width:0;}
+.goal-chip{display:flex;align-items:center;gap:5px;min-width:0;white-space:nowrap;}
+.goal-chip .goal-swatch{display:block;flex:none;width:13px;height:13px;border-radius:4px;box-shadow:inset 0 2px #ffffffaa,inset 0 -2px #00000018,0 1px 0 #00000015;}
+.goal-chip .goal-swatch.c0{background:#fa5b9c}.goal-chip .goal-swatch.c1{background:#ffc13f}.goal-chip .goal-swatch.c2{background:#4cb9f3}.goal-chip .goal-swatch.c3{background:#8b6df0}.goal-chip .goal-swatch.c4{background:#43d5a6}.goal-chip .goal-swatch.c5{background:#ff855e}
+.goal-chip .goal-name{font-size:10px;font-weight:1000;color:var(--ink)}.goal-chip .goal-count{font-variant-numeric:tabular-nums;font-size:11px;font-weight:1000}
+.goal-chip.done .goal-count{color:#218e78}
+@media(max-width:420px){.goal-row{align-items:flex-start}.goals{justify-content:flex-start;gap:5px}.goal-chip{gap:4px;padding:5px 6px}.goal-chip .goal-name{font-size:9px}.goal-chip .goal-count{font-size:10px}}
