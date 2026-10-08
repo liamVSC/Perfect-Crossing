@@ -123,7 +123,7 @@ function renderScene() {
 
   const player = document.createElement("div");
   player.className = "player";
-  player.textContent = "🧍";
+  player.setAttribute("aria-label", "Player");
   board.append(player);
   state.renderPlayer = player;
 }
