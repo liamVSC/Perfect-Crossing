@@ -197,15 +197,19 @@ function move() {
   if (checkCollision()) return;
 
   state.player++;
-  if (state.player > state.levelData.lanes) {
+  updateRenderPositions();
+
+  // Reaching the far side is the win condition. Check the destination lane
+  // once, then complete immediately; do not require an extra tap from the
+  // final lane or leave the player exposed to traffic after visually crossing.
+  if (checkCollision()) return;
+  if (state.player >= state.levelData.lanes) {
     complete();
     return;
   }
 
-  updateRenderPositions();
-  if (checkCollision()) return;
   message.textContent =
-    state.player === state.levelData.lanes ? "One more move!" : "Watch the traffic";
+    state.player === state.levelData.lanes - 1 ? "One more move!" : "Watch the traffic";
 }
 
 function fail() {
