@@ -90,7 +90,7 @@ function makeLevel(level){
 const defaultSave={level:1,cash:0,gems:0,completed:0,noHit:0,streak:0,tasks:{five:0,fifteen:0,clean:0,fifty:0,hundred:0}};
 function loadSave(){try{return{...defaultSave,...JSON.parse(localStorage.getItem(SAVE_KEY)||"{}")}}catch{return{...defaultSave}}}
 let save=loadSave();
-let state={level:save.level,player:0,running:true,hit:false,started:false,levelData:null,last:performance.now(),cars:[],animation:null};
+let state={level:save.level,player:0,running:true,hit:false,started:false,levelData:null,last:performance.now(),cars:[],animation:null,renderCars:null,renderPlayer:null};
 
 const board=document.querySelector("#board"),cashEl=document.querySelector("#cash"),gemsEl=document.querySelector("#gems"),levelEl=document.querySelector("#level"),message=document.querySelector("#message"),moveButton=document.querySelector("#moveButton"),modal=document.querySelector("#modal"),modalTitle=document.querySelector("#modalTitle"),modalText=document.querySelector("#modalText"),modalButton=document.querySelector("#modalButton");
 
@@ -167,7 +167,7 @@ function move(){
   if(checkCollision())return;
   state.player++;
   if(state.player>state.levelData.lanes){complete();return}
-  render();
+  updateRenderPositions();
   if(checkCollision())return;
   message.textContent=state.player===state.levelData.lanes?"One more move!":"Watch the traffic";
 }
@@ -208,8 +208,8 @@ function frame(now){
       if(c.speed>0&&c.x>105)c.x=-c.width;
       if(c.speed<0&&c.x<-c.width)c.x=105;
     });
-    if(checkCollision()){render();requestAnimationFrame(frame);return}
-    render();
+    updateRenderPositions();
+    if(checkCollision()){requestAnimationFrame(frame);return}
   }
   requestAnimationFrame(frame);
 }
