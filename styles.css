@@ -312,3 +312,13 @@ body{background:#eee9ff}
 .goal-chip .goal-name{font-size:10px;font-weight:1000;color:var(--ink)}.goal-chip .goal-count{font-variant-numeric:tabular-nums;font-size:11px;font-weight:1000}
 .goal-chip.done .goal-count{color:#218e78}
 @media(max-width:420px){.goal-row{align-items:flex-start}.goals{justify-content:flex-start;gap:5px}.goal-chip{gap:4px;padding:5px 6px}.goal-chip .goal-name{font-size:9px}.goal-chip .goal-count{font-size:10px}}
+
+
+/* Keep level goals visible on narrow mobile screens by giving them their own row. */
+.game-screen .goal-row{display:grid;grid-template-columns:minmax(0,1fr);justify-content:stretch;align-items:start;gap:7px;padding:9px 3px 8px;}
+.game-screen .goal-copy{min-width:0;}
+.game-screen .goals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:7px;}
+.game-screen .goal-chip{justify-content:center;min-height:31px;padding:5px 7px;gap:5px;}
+.game-screen .goal-chip .goal-name{font-size:11px;}
+.game-screen .goal-chip .goal-count{font-size:11px;}
+@media(max-width:360px){.game-screen .goal-chip{gap:4px;padding:5px 4px}.game-screen .goal-chip .goal-name{font-size:10px}.game-screen .goal-chip .goal-count{font-size:10px}}
