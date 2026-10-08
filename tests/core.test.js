@@ -68,8 +68,16 @@ for (let level = 1; level <= core.MAX_LEVEL; level++) {
 assert.equal(maxSave.level, core.MAX_LEVEL);
 assert.equal(maxSave.completed, core.MAX_LEVEL);
 
+const indexSource = fs.readFileSync("index.html", "utf8");
+const swSource = fs.readFileSync("sw.js", "utf8");
 assert.match(fs.readFileSync("game.js", "utf8"), /advanceTraffic/);
 assert.match(fs.readFileSync("game.js", "utf8"), /updateRenderPositions/);
 assert.match(fs.readFileSync("game.js", "utf8"), /checkCollision/);
+assert.match(indexSource, /game-core\.js/);
+assert.match(indexSource, /serviceWorker\.register/);
+assert.match(swSource, /game-core\.js/);
+assert.match(swSource, /perfect-crossing-v2/);
+assert.match(swSource, /self\.skipWaiting/);
+assert.match(swSource, /self\.clients\.claim/);
 
 console.log("Perfect Crossing: 5000-level generation, authoritative solvability, determinism, collision, movement and progression checks passed.");
