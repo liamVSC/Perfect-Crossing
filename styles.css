@@ -322,3 +322,9 @@ body{background:#eee9ff}
 .game-screen .goal-chip .goal-name{font-size:11px;}
 .game-screen .goal-chip .goal-count{font-size:11px;}
 @media(max-width:360px){.game-screen .goal-chip{gap:4px;padding:5px 4px}.game-screen .goal-chip .goal-name{font-size:10px}.game-screen .goal-chip .goal-count{font-size:10px}}
+
+/* Booster placement mode: make valid target blocks obvious before placing a power-up. */
+.game-screen .board.placement-mode .tile:not(.empty){outline:3px solid #fff;outline-offset:-4px;filter:brightness(1.08);animation:placement-ready .85s ease-in-out infinite alternate;}
+.game-screen .board.placement-mode .tile:not(.empty):active{outline-color:#ffd15c;}
+@keyframes placement-ready{from{box-shadow:inset 0 2px 0 #ffffffaa,inset 0 -3px 0 #00000018,0 2px 0 #38218f}to{box-shadow:inset 0 2px 0 #ffffffaa,inset 0 -3px 0 #00000018,0 2px 0 #38218f,0 0 0 2px #ffd15c;}}
+@media(prefers-reduced-motion:reduce){.game-screen .board.placement-mode .tile:not(.empty){animation:none}}
