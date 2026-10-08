@@ -136,9 +136,11 @@ function updateRenderPositions() {
     const el = state.renderCars[index];
     if (!el) return;
     el.style.width = car.width + "%";
-    el.style.height = car.height + "%";
+    // Traffic height must be based on the actual lane height, not a percentage
+    // of the whole board (which made vehicles span multiple lanes and look like blocks).
+    el.style.height = (laneH * (car.kind === "truck" ? 0.66 : 0.54)) + "px";
     el.style.left = car.x + "%";
-    el.style.top = grassH + car.lane * laneH + laneH * 0.29 + "px";
+    el.style.top = grassH + car.lane * laneH + (laneH - parseFloat(el.style.height)) / 2 + "px";
   });
 
   state.renderPlayer.style.left = "calc(50% - 19px)";
