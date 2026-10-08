@@ -1,4 +1,4 @@
-name: Deploy Perfect Crossing to GitHub Pages
+name: Deploy Pop Party to GitHub Pages
 
 on:
   push:
