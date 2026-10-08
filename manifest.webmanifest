@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Pop Party — Tiny pops, big combos!",
   "short_name": "Pop Party",
-  "description": "A colourful character-matching puzzle adventure.",
+  "description": "A colourful mobile block-popping puzzle game.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
