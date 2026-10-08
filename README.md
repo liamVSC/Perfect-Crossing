@@ -12,11 +12,11 @@ No build step, account, backend, or ads are required. Progress and the active pu
 
 - Tap a connected group of 2+ matching blocks to pop it.
 - Groups of 4+ create rockets, 5+ create bombs, and 9+ create rainbow clears.
-- Tiles fall under gravity and refill from above. New matches formed by gravity do not automatically pop; each move is deliberate.
+- Tiles fall under gravity and refill from above. Groups of 3+ created by gravity can trigger up to four automatic chain reactions, with bonus score for each cascade.
 - Clear both colour objectives before running out of moves.
-- Completing a level awards coins and automatically advances to the next level.
-- Only the current unlocked level is playable; completed levels cannot be replayed.
-- Rocket, bomb, and shuffle boosters are available. Settings include sound and vibration preferences.
+- Completing a level awards coins, records a best score, unlocks the next level, and returns you to the level trail. Completed levels can be replayed.
+- Any unlocked level is playable; future levels stay locked until the previous level is completed.
+- Rocket, bomb, and shuffle boosters are available. A local daily challenge rewards 25 coins for popping five groups, and four achievements award extra coins. Progress, daily challenge state, achievements, and best scores are saved locally on this device.
 
 ## Development
 

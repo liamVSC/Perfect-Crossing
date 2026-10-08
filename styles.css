@@ -432,3 +432,49 @@ body{
 @media(min-width:481px){
   body{background-attachment:fixed}
 }
+
+/* Level trail, daily challenge and achievement cards */
+.home-screen{height:auto!important;min-height:calc(100dvh - 110px);padding:14px 0 28px;display:flex;flex-direction:column;justify-content:flex-start;gap:15px;overflow-y:auto}
+.map-hero{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 5px 4px}
+.map-hero .home-title{font-size:clamp(28px,8vw,39px);line-height:1.02;margin:0;letter-spacing:-1.3px}
+.map-hero .home-copy{font-size:12px;margin:8px 0 0;max-width:255px}
+.map-mascot{flex:none;display:grid;place-items:center;width:78px;height:78px;border-radius:27px;background:linear-gradient(145deg,#ff85cb,#8d4dff 60%,#4a6aff);border:2px solid #e2caff;box-shadow:0 7px 0 #37166f,0 0 30px #9c56ff55;color:#fff;font-size:47px;transform:rotate(7deg)}
+.map-current-card{display:flex;align-items:center;gap:10px}
+.map-current-card .level-progress strong{font-size:12px}
+.map-current-card .level-progress small{display:block;font-size:9px;color:#d0c0f4;margin-top:5px}
+.map-current-card .map-button{min-width:67px;min-height:45px}
+.map-section,.daily-card,.achievement-card{border:1px solid #6844a6;border-radius:20px;background:linear-gradient(145deg,#2d1855d9,#1b1040f2);padding:13px;box-shadow:0 5px 0 #100826,0 12px 25px #08031f44}
+.section-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.section-heading .home-kicker{margin:0 0 3px;font-size:8px}
+.section-heading h2,.daily-copy h2{font-size:17px;line-height:1.1;margin:0;letter-spacing:-.4px;color:#fff}
+.map-sticker,.achievement-count{border:1px solid #8a61c3;background:#45246d;border-radius:12px;padding:7px 10px;font-size:12px;color:#ffe477;font-weight:1000}
+.level-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;position:relative;padding:3px 1px}
+.map-node{position:relative;min-width:0;aspect-ratio:1;border:1px solid #c9a8ff;border-radius:15px;background:linear-gradient(145deg,#a15bff,#6834d8);color:#fff;font-size:17px;font-weight:1000;box-shadow:0 4px 0 #351477,0 7px 12px #0b041f44;touch-action:manipulation}
+.map-node:after{content:"";position:absolute;left:17%;top:10%;width:35%;height:15%;border-radius:50%;background:#ffffff50;transform:rotate(-25deg)}
+.map-node.current{background:linear-gradient(145deg,#ff79c6,#f33e9b);border-color:#ffd3ec;box-shadow:0 4px 0 #92205c,0 0 0 3px #ff80c544,0 0 20px #ff59ba44;animation:map-current 1.4s ease-in-out infinite}
+.map-node.completed{background:linear-gradient(145deg,#ffe776,#ffb832);border-color:#fff0a6;color:#6b3a14;box-shadow:0 4px 0 #9b5b17}
+.map-node.locked{background:linear-gradient(145deg,#392b59,#261a45);border-color:#574275;color:#a394c3;box-shadow:0 3px 0 #150c2d;opacity:.72}
+.map-node:disabled{cursor:not-allowed}
+.daily-card{display:grid;grid-template-columns:43px minmax(0,1fr) auto;align-items:center;gap:10px;background:linear-gradient(120deg,#4d2476,#2a1756 65%,#1a1747);border-color:#9c59bd}
+.daily-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#ff7cc3,#ffb85a);font-size:23px;box-shadow:0 4px 0 #8b286f}
+.daily-copy .home-kicker{margin:0 0 4px;font-size:8px}
+.daily-copy h2{font-size:14px}
+.daily-copy>p:not(.home-kicker){font-size:10px;color:#d0c1f5;margin:5px 0 6px;font-weight:800}
+.daily-track,.progress-track{height:7px;background:#180d38;border-radius:8px;overflow:hidden}
+.daily-track span{display:block;width:0;height:100%;border-radius:8px;background:linear-gradient(90deg,#ff79c6,#ffe477);transition:width .25s}
+.daily-claim{border:1px solid #ffe08b;border-radius:12px;padding:9px 8px;background:linear-gradient(145deg,#ffe477,#ffb43c);color:#633316;font-size:9px;font-weight:1000;min-height:40px;white-space:nowrap}
+.daily-claim:disabled{background:#3c2a5b;border-color:#64487e;color:#b5a0d1;opacity:.8}
+.achievement-list{display:grid;gap:7px}
+.achievement-item{display:flex;align-items:center;gap:9px;padding:9px;background:#241447;border:1px solid #503474;border-radius:13px;min-width:0}
+.achievement-item.earned{background:linear-gradient(100deg,#214b58,#26345c);border-color:#5cceb8}
+.achievement-medal{display:grid;place-items:center;width:32px;height:32px;flex:none;border-radius:10px;background:#4a2d73;font-size:18px}
+.achievement-item.earned .achievement-medal{background:#226e6a}
+.achievement-text{flex:1;min-width:0}.achievement-text strong,.achievement-text small{display:block}
+.achievement-text strong{font-size:11px;color:#fff}.achievement-text small{font-size:9px;color:#c4b3e7;margin-top:2px}
+.achievement-reward{font-size:9px;font-weight:1000;color:#ffe477;white-space:nowrap}.achievement-item.earned .achievement-reward{color:#8bffe1}
+.home-stats{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0;padding:0 4px}
+.home-stats span{padding:7px 10px;border-radius:12px;font-size:10px;font-weight:900}
+.home-stats span:last-child{background:transparent!important;border:0!important;box-shadow:none!important;color:#bca9e7!important;font-size:9px}
+@keyframes map-current{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@media(max-width:380px){.map-section,.daily-card,.achievement-card{padding:10px;border-radius:17px}.level-map{gap:6px}.map-node{border-radius:12px;font-size:15px}.daily-card{grid-template-columns:36px minmax(0,1fr) auto;gap:7px}.daily-icon{width:36px;height:36px;font-size:20px}.daily-claim{padding:7px 6px;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.map-node.current{animation:none}}
