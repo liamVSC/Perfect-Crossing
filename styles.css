@@ -515,3 +515,21 @@ body{
 .home-screen .daily-card,.home-screen .achievement-card{margin:0}
 .home-screen .home-stats{margin-top:2px}
 @media(max-width:380px){.home-play-button{min-height:70px;padding-left:14px}.home-play-button>strong{font-size:18px}}
+
+/* Match feedback is tied to the player's chosen group; settling never triggers another clear. */
+.match-burst{position:fixed;left:50%;top:47%;z-index:8;pointer-events:none;display:flex;flex-direction:column;align-items:center;gap:7px;transform:translate(-50%,-50%);color:#fff;text-align:center;text-shadow:0 3px 0 #5030b8,0 5px 16px #24104c80;animation:match-burst-in .82s cubic-bezier(.16,.84,.28,1) forwards}
+.match-burst strong{font-size:clamp(25px,8vw,42px);font-weight:1000;letter-spacing:-1px;white-space:nowrap}
+.match-burst span{font-size:clamp(13px,4vw,18px);font-weight:1000;letter-spacing:2px;color:#ffe477}
+.board-wrap.board-hit{animation:board-hit .28s ease-out}
+.modal.modal-win{border-color:#ffe58c;box-shadow:0 10px 0 #edc45a,0 22px 50px #26144b44}
+.modal.modal-win .modal-emoji{filter:drop-shadow(0 4px 0 #ffe6a3);animation:win-emote .65s ease-in-out 2}
+.modal.modal-win .primary-button{background:linear-gradient(100deg,#ffad37,#f078b2);box-shadow:0 5px 0 #bd4f93}
+.modal.modal-loss{border-color:#ffc7a8;box-shadow:0 10px 0 #eaa17d,0 22px 50px #26144b44}
+.modal.modal-loss .modal-emoji{animation:loss-emote .45s ease-out}
+.modal-stats{flex-wrap:wrap}
+.modal-stat{flex:1;min-width:75px}
+@keyframes match-burst-in{0%{opacity:0;transform:translate(-50%,-35%) scale(.65)}18%{opacity:1;transform:translate(-50%,-50%) scale(1.12)}35%{transform:translate(-50%,-50%) scale(1)}78%{opacity:1}100%{opacity:0;transform:translate(-50%,-75%) scale(.94)}}
+@keyframes board-hit{0%,100%{transform:translateX(0)}22%{transform:translateX(-3px) rotate(-.25deg)}48%{transform:translateX(3px) rotate(.25deg)}72%{transform:translateX(-1px)}}
+@keyframes win-emote{50%{transform:translateY(-7px) rotate(7deg) scale(1.08)}}
+@keyframes loss-emote{0%{transform:scale(.75) rotate(-8deg)}70%{transform:scale(1.08) rotate(4deg)}100%{transform:scale(1) rotate(0)}}
+@media(prefers-reduced-motion:reduce){.match-burst,.board-wrap.board-hit,.modal-win .modal-emoji,.modal-loss .modal-emoji{animation:none!important}}
