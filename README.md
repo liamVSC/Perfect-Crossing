@@ -16,7 +16,7 @@ No build step, account, backend, or ads are required. Progress and the active pu
 - Clear both colour objectives before running out of moves.
 - First-time level clears award coins; every fifth distinct level cleared grants a 25-coin milestone bonus. Replays can improve best scores but do not repeatedly mint level-clear coins.
 - Any unlocked level is playable; future levels stay locked until the previous level is completed.
-- Rocket, bomb, and shuffle boosters are available. A local daily challenge rewards 25 coins for popping five groups, and four achievements award extra coins for distinct progression milestones. Progress, daily challenge state, achievements, and best scores are saved locally on this device.
+- Rocket, bomb, and shuffle boosters are available. The daily challenge has a fixed board for each local calendar date. Completing both colour goals earns 25 coins, plus 5 coins per consecutive-day streak day after the first, capped at 50 coins per daily completion; replaying on the same day does not pay again. Four achievements award extra coins for distinct progression milestones. Progress, daily challenge state, achievements, and best scores are saved locally on this device.
 
 ## Development
 
