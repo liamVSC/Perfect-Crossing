@@ -550,3 +550,6 @@ body{
 .powerup:focus-visible{outline:3px solid #ffbf45;outline-offset:3px}
 @media(max-width:380px){.powerups{gap:7px}.powerup{min-height:122px;padding:9px 5px}.power-icon{width:49px;height:49px;border-radius:16px;font-size:28px}.powerup strong{font-size:11px}.powerup small{font-size:9px;padding:3px 6px}}
 @media(prefers-reduced-motion:reduce){.powerup{transition:none}}
+
+/* Board obstacles: crates break in one adjacent pop; ice needs two. */
+.tile.power-crate{background:linear-gradient(145deg,#d8a16e,#9b6339);box-shadow:inset 0 3px #f6d5b0,inset 0 -4px #754321,0 2px #3c259c}.tile.power-ice{background:linear-gradient(145deg,#d8f8ff,#76cfe8);box-shadow:inset 0 3px #fff,inset 0 -4px #4e9bbd,0 2px #3c259c}.tile.power-cracked-ice{background:linear-gradient(145deg,#f4fbff,#a4d6e8);box-shadow:inset 0 3px #fff,inset 0 -4px #6da9c1,0 2px #3c259c}.tile .crate-art,.tile .ice-art,.tile .cracked-ice-art{font-size:clamp(14px,5vw,23px);filter:drop-shadow(0 1px 1px #30205030)}
