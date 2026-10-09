@@ -120,7 +120,7 @@ body{background:linear-gradient(180deg,#f7f3ff 0%,#f9fbff 55%,#f2f8ff 100%)}
 /* Original illustrated character art and game juice */
 .tile .face{width:72%;height:72%;display:grid;place-items:center}
 .tile .face svg{width:100%;height:100%;filter:drop-shadow(0 2px 1px #0002)}
-.power-art{display:grid;place-items:center;width:76%;height:76%;border-radius:50%;font-size:clamp(19px,6vw,31px);font-weight:1000;color:#fff}
+.power-art{display:grid;place-items:center;width:82%;height:82%;border-radius:30%;font-size:clamp(22px,6.5vw,34px);font-weight:1000;line-height:1;filter:drop-shadow(0 2px 1px #0003)}
 .rocket-art{background:linear-gradient(145deg,#ffcf55,#ff7e45)}
 .bomb-art{background:radial-gradient(circle at 35% 30%,#ffb6ed,#d93fd2 70%)}
 .rainbow-art{background:conic-gradient(#ff668f,#ffc94d,#55dfad,#55cfff,#9b79ff,#ff668f);animation:rainbow-spin 2s linear infinite}
