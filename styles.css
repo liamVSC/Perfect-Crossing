@@ -502,3 +502,16 @@ body{
  .level-map .map-node:nth-child(18){grid-column:3;grid-row:4}
  .level-map .map-node:nth-child(19){grid-column:2;grid-row:4}
  .level-map .map-node:nth-child(20){grid-column:1;grid-row:4}
+
+/* Home layout: no map or trail; the primary level action sits at the bottom. */
+.map-section,.map-current-card{display:none!important}
+.home-play-button{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;width:100%;min-height:76px;margin:16px 0 2px;padding:15px 58px 15px 18px;border:2px solid #d8c8ff;border-radius:20px;background:linear-gradient(110deg,#9b79ff,#7048e8 62%,#5c39cb);color:#fff;text-align:left;box-shadow:0 6px 0 #4123a7,0 12px 20px #5635b72b;cursor:pointer;transition:transform .12s,filter .12s}
+.home-play-button:active{transform:translateY(3px);box-shadow:0 3px 0 #4123a7}
+.home-play-label{font-size:9px;letter-spacing:1.5px;font-weight:1000;color:#e8deff}
+.home-play-button>strong{font-size:20px;letter-spacing:.2px;font-weight:1000;line-height:1.15}
+.home-play-arrow{position:absolute;right:18px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:#ffffff26;border:1px solid #ffffff60;font-size:31px;line-height:1}
+.home-screen{display:flex;flex-direction:column;gap:12px}
+.home-screen .map-hero{margin-bottom:2px}
+.home-screen .daily-card,.home-screen .achievement-card{margin:0}
+.home-screen .home-stats{margin-top:2px}
+@media(max-width:380px){.home-play-button{min-height:70px;padding-left:14px}.home-play-button>strong{font-size:18px}}

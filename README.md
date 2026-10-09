@@ -1,6 +1,6 @@
 # Pop Party
 
-Pop Party is an original, mobile-first block-popping puzzle game. Tap connected groups of two or more matching blocks, create power-ups, clear level objectives, earn coins, and unlock the next level.
+Pop Party is an original, mobile-first block-popping puzzle game. Tap connected groups of two or more matching blocks, create power-ups, clear level objectives, earn coins, and unlock the next level. Choose your next level from the large play button at the bottom of the home screen.
 
 ## Play
 
