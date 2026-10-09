@@ -533,3 +533,20 @@ body{
 @keyframes win-emote{50%{transform:translateY(-7px) rotate(7deg) scale(1.08)}}
 @keyframes loss-emote{0%{transform:scale(.75) rotate(-8deg)}70%{transform:scale(1.08) rotate(4deg)}100%{transform:scale(1) rotate(0)}}
 @media(prefers-reduced-motion:reduce){.match-burst,.board-wrap.board-hit,.modal-win .modal-emoji,.modal-loss .modal-emoji{animation:none!important}}
+
+/* High-contrast booster buttons: large illustrated icons, bright rims and clear card hierarchy. */
+.powerups{gap:10px}
+.powerup{position:relative;flex-direction:column;justify-content:flex-start;align-items:stretch;gap:9px;min-height:132px;padding:11px 9px 10px;border:2px solid #e5dcff;border-radius:18px;background:linear-gradient(180deg,#fff 0%,#f8f4ff 100%);box-shadow:0 5px 0 #dcd0ff,0 8px 16px #5b3bb51c;overflow:hidden;transition:transform .14s,box-shadow .14s,border-color .14s}
+.powerup:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#fff,#bca8ff,#fff)}
+.powerup:active{transform:translateY(3px) scale(.98);box-shadow:0 2px 0 #dcd0ff}
+.power-icon{position:relative;width:56px;height:56px;align-self:center;display:grid;place-items:center;flex:none;border:3px solid #fff;border-radius:18px;font-size:31px;line-height:1;filter:drop-shadow(0 4px 0 #00000013);box-shadow:inset 0 2px 0 #ffffffa8,0 5px 0 #00000016,0 7px 13px #34205222}
+.rocket-icon{background:radial-gradient(circle at 32% 23%,#fff6bc 0 7%,transparent 8%),linear-gradient(145deg,#ffe878 0%,#ff9d45 55%,#f45c87 100%);transform:rotate(-5deg)}
+.bomb-icon{background:radial-gradient(circle at 32% 23%,#fff 0 5%,transparent 6%),linear-gradient(145deg,#ffb3ef,#e65bd5 58%,#a844db)}
+.shuffle-icon{background:radial-gradient(circle at 30% 25%,#fff 0 5%,transparent 6%),linear-gradient(145deg,#8ceeff,#6687ff 55%,#8052ed)}
+.powerup>span:nth-child(2){display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.powerup strong{font-size:12px;line-height:1.1;font-weight:1000;color:#39245f}
+.powerup small{display:inline-flex;align-items:center;justify-content:center;min-height:21px;padding:3px 8px;border-radius:999px;background:#eee7ff;color:#7150c9;font-size:10px;font-weight:1000;margin:0}
+.powerup .power-plus{position:absolute;right:8px;top:8px;margin:0;color:#fff;background:#8b6df0;border-radius:8px;padding:2px 5px;font-size:10px;box-shadow:0 2px 0 #5737b8}
+.powerup:focus-visible{outline:3px solid #ffbf45;outline-offset:3px}
+@media(max-width:380px){.powerups{gap:7px}.powerup{min-height:122px;padding:9px 5px}.power-icon{width:49px;height:49px;border-radius:16px;font-size:28px}.powerup strong{font-size:11px}.powerup small{font-size:9px;padding:3px 6px}}
+@media(prefers-reduced-motion:reduce){.powerup{transition:none}}
