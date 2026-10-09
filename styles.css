@@ -481,7 +481,7 @@ body{
 
 /* Adventure trail: milestone stops and a serpentine route. */
 .level-map{isolation:isolate;row-gap:11px}
-.level-map:before{content:"";position:absolute;z-index:-1;left:7%;right:7%;top:12%;bottom:12%;border:3px dashed #8b69cb;border-radius:35px;opacity:.55;pointer-events:none}
+.level-map:before{content:"";position:absolute;z-index:-1;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10 12 H90 V37 H10 V62 H90 V87 H10' fill='none' stroke='%238b69cb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='2 2' opacity='.8'/%3E%3C/svg%3E");background-size:100% 100%;background-repeat:no-repeat;pointer-events:none}
 .map-node{z-index:0;transition:transform .15s,filter .15s}
 .map-node:not(:disabled):active{transform:translateY(2px) scale(.96)}
 .map-node.milestone:before{content:"★";position:absolute;z-index:2;right:-5px;top:-6px;width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#fff0a2;color:#78451a;font-size:11px;border:2px solid #fff;box-shadow:0 2px 0 #6e3f9b}

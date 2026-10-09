@@ -6,7 +6,7 @@ Pop Party is an original, mobile-first block-popping puzzle game. Tap connected 
 
 Live game: https://liamvsc.github.io/temp-game/
 
-No build step, account, backend, or ads are required. Progress and the active puzzle run are saved locally in the browser, including placed boosters; saves do not sync between devices.
+No build step, account, backend, or ads are required. Progress and the active puzzle run are saved locally in the browser, including placed boosters and a settled move state that survives app suspension during animations; saves do not sync between devices.
 
 ## Rules
 
